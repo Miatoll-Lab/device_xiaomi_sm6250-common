@@ -27,6 +27,9 @@
 #Light
 /vendor/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_sm6250    u:object_r:hal_light_default_exec:s0
 
+# Mlipay
+/vendor/bin/mlipayd@1\.1                                     u:object_r:hal_mlipay_default_exec:s0
+
 # Mac
 /data/vendor/mac_addr(/.*)?                     u:object_r:vendor_wifi_vendor_data_file:s0
 /vendor/bin/nv_mac                              u:object_r:vendor_wcnss_service_exec:s0
