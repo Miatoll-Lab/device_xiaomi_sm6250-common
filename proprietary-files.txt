@@ -65,7 +65,6 @@ vendor/lib64/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so
 
 # Alarm
--product/app/PowerOffAlarm/PowerOffAlarm.apk
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
@@ -191,7 +190,6 @@ vendor/lib64/hw/audio.bluetooth_qti.default.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 
 # Camera
-vendor/etc/camera/camxoverridesettings.txt
 vendor/etc/camera/CFR_para_M_src1.bin
 vendor/etc/camera/CFR_para_M_src2.bin
 vendor/etc/camera/CFR_para_UW_src1.bin
@@ -570,6 +568,11 @@ vendor/lib64/libcvp_common.so
 vendor/lib64/libcvp_stub.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
+# Dirac
+vendor/etc/diracmobile.config
+vendor/lib/libDiracAPI_SHARED.so
+vendor/lib/soundfx/libdirac.so
+
 # DPM
 system_ext/bin/dpmd
 system_ext/etc/dpm/dpm.conf
@@ -638,7 +641,7 @@ vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # Fingerprint
 vendor/lib64/com.fingerprints.extension@1.0.so
-vendor/lib64/hw/fingerprint.fpc.default.so
+vendor/lib64/hw/fingerprint.fpc.default.so|645bf256da2db3ce60dddab9b3282ab7241bbcb0
 vendor/lib64/hw/fingerprint.goodix.default.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
@@ -706,23 +709,23 @@ vendor/lib64/libdisp-aba.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libhdr_tm.so
 
-# Graphics (SDM) - from curtana-V12.0.5.0.RJWINXM
-vendor/lib/libqseed3.so|3d54259d2b90b6193ff4b2565ad82b15a31b42af
-vendor/lib/libsdedrm.so|abb87737f0833482c77134c7cd5991f20b106a20
-vendor/lib/libsdm-color.so|f83bb292a60dba8ff3b8efc643a0494e556a40c1
-vendor/lib/libsdm-colormgr-algo.so|ff4d2727b6a89d405729c17cd5a565dd5a2b614d
-vendor/lib/libsdm-diag.so|5cd1fa74b3bed8039ac82faecff59ed31231d1c1
-vendor/lib/libsdm-disp-vndapis.so|951ad465af2faece2d79ecf7a2ea60bb676505c6
-vendor/lib/libsdmextension.so|c2d8414f3e7b25bc764d255223bb4b63ccbc0a3a
-vendor/lib/libtinyxml2_1.so|73f7b6a9aa52ac469c01d60d72219d2d0f4b11e1
-vendor/lib64/libqseed3.so|a449d79b912415f542509874b43338b27795a1c3
-vendor/lib64/libsdedrm.so|582910d21139781ad9e414c35207584f51e035e2
-vendor/lib64/libsdm-color.so|b2bcf2c205b501024407ed5c216d2b290688bd64
-vendor/lib64/libsdm-colormgr-algo.so|6d17546d7822803700dc21968f75069d1b7392b1
-vendor/lib64/libsdm-diag.so|3d5c311d7d5d842e5a75e9ae3f9f70ceb00cd1cf
-vendor/lib64/libsdm-disp-vndapis.so|42f536763a2f91dcbae5b4b7214e652283c389d6
-vendor/lib64/libsdmextension.so|91f115c1423f4bdabd3f5577b08a9c35aa32052b
-vendor/lib64/libtinyxml2_1.so|621dbc8e3d0529b9ee35393698de82ea006ca7fa
+# Graphics (SDM) - from NX627J RKQ1.200826.002
+vendor/lib/libqseed3.so
+vendor/lib/libsdedrm.so
+vendor/lib/libsdm-color.so
+vendor/lib/libsdm-colormgr-algo.so
+vendor/lib/libsdm-diag.so
+vendor/lib/libsdm-disp-vndapis.so
+vendor/lib/libsdmextension.so
+vendor/lib/libtinyxml2_1.so
+vendor/lib64/libqseed3.so
+vendor/lib64/libsdedrm.so
+vendor/lib64/libsdm-color.so
+vendor/lib64/libsdm-colormgr-algo.so
+vendor/lib64/libsdm-diag.so
+vendor/lib64/libsdm-disp-vndapis.so
+vendor/lib64/libsdmextension.so
+vendor/lib64/libtinyxml2_1.so
 
 # Graphics firmware
 vendor/firmware/a615_zap.b00
@@ -836,14 +839,6 @@ vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 # Hotspot
 vendor/lib/libqsap_sdk.so
 vendor/lib64/libqsap_sdk.so
-
-# HotwordEnrollment
--product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk;PRESIGNED
--product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk;PRESIGNED
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
-product/etc/permissions/privapp-permissions-hotword.xml
-system/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml
-system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # IMS
 -system_ext/app/uceShimService/uceShimService.apk
@@ -1133,13 +1128,6 @@ vendor/etc/lm/GameOptimizationFeature.xml
 vendor/etc/lm/prekill/prekill_4GB.data
 vendor/etc/lm/prekill/prekill_6GB.data
 vendor/etc/lm/PreKillFeature.xml
-vendor/etc/msm_irqbalance.conf
-vendor/etc/perf/commonresourceconfigs.xml
-vendor/etc/perf/perfboostsconfig.xml
-vendor/etc/perf/perfconfigstore.xml
-vendor/etc/perf/targetconfig.xml
-vendor/etc/perf/targetresourceconfigs.xml
-vendor/etc/powerhint.xml
 vendor/lib/libperfconfig.so
 vendor/lib/libperfgluelayer.so
 vendor/lib/libperfioctl.so
@@ -1147,9 +1135,6 @@ vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-perfd.so
 vendor/lib/libqti-util.so
 vendor/lib/libskewknob.so
-vendor/lib/vendor.qti.hardware.perf@2.0.so
-vendor/lib/vendor.qti.hardware.perf@2.1.so
-vendor/lib/vendor.qti.hardware.perf@2.2.so
 vendor/lib64/libadaptlaunch.so
 vendor/lib64/libappclassifier.so
 vendor/lib64/libgameoptfeature.so
@@ -1166,9 +1151,6 @@ vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 vendor/lib64/libskewknob.so
-vendor/lib64/vendor.qti.hardware.perf@2.0.so
-vendor/lib64/vendor.qti.hardware.perf@2.1.so
-vendor/lib64/vendor.qti.hardware.perf@2.2.so
 
 # Peripheral
 vendor/bin/pm-proxy

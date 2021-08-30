@@ -12,11 +12,10 @@ disable.cpp.power.collapse              u:object_r:vendor_camera_prop:s0
 vendor.camera.eis.gyro_name             u:object_r:vendor_camera_prop:s0
 vidc.enc.dcvs.extra-buff-count          u:object_r:vendor_camera_prop:s0
 camera.gyro.				u:object_r:vendor_camera_prop:s0
-vendor.camera.aux.packageblacklist	u:object_r:vendor_camera_prop:s0
+#vendor.camera.aux.packageblacklist	u:object_r:vendor_camera_prop:s0
 persist.camera.gyro			u:object_r:vendor_camera_prop:s0
 vendor.camera.boot_complete		u:object_r:vendor_camera_prop:s0
-ro.camera.req.fmq.size                  u:object_r:vendor_ro_camera_prop:s0
-ro.camera.res.fmq.size                  u:object_r:vendor_ro_camera_prop:s0
+ro.camera.req.fmq.size			u:object_r:vendor_camera_prop:s0
 
 # Camera IDs
 vendor.camera.sensor.rearMacro.fuseID	u:object_r:vendor_camera_prop:s0
@@ -25,7 +24,10 @@ vendor.camera.sensor.rearTele.fuseID	u:object_r:vendor_camera_prop:s0
 vendor.camera.sensor.frontMain.fuseID	u:object_r:vendor_camera_prop:s0
 vendor.camera.sensor.rearMain.fuseID	u:object_r:vendor_camera_prop:s0
 
-#IR
+# Dirac
+persist.audio.dirac                             u:object_r:dirac_prop:s0
+
+# IR
 ro.lirc.dev				u:object_r:lirc_prop:s0
 
 # Fingerprint
@@ -45,10 +47,6 @@ ro.product.system.manufacturer          u:object_r:exported2_default_prop:s0
 # Media
 gpu.stats.debug.level                   u:object_r:vendor_default_prop:s0
 
-# Mlipay
-persist.vendor.sys.pay.                 u:object_r:mlipay_prop:s0
-persist.vendor.sys.provision.status     u:object_r:mlipay_prop:s0
-
 # RIL
 ro.build.software.version               u:object_r:exported_radio_prop:s0
 ro.fota.oem                             u:object_r:exported_radio_prop:s0
@@ -62,3 +60,7 @@ vendor.sys.thermal.			u:object_r:thermal_engine_prop:s0
 
 # Wlan
 persist.vendor.wigig.npt.enable         u:object_r:vendor_default_prop:s0
+
+# Mlipay
+persist.sys.ifaa                        u:object_r:ifaa_prop:s0
+persist.vendor.sys.pay.		        u:object_r:ifaa_prop:s0
